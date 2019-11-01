@@ -1,7 +1,13 @@
+import React, { Component } from 'react'
 import {
-  Button
+  Button,
+  View
 } from 'react-native'
-
+import {
+  Provider,
+  DefaultTheme
+} from 'react-native-paper'
+import AsyncStorage from '@react-native-community/async-storage'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
@@ -47,4 +53,27 @@ const AppNavigator = createStackNavigator({
 
 })
 
-export default createAppContainer(AppNavigator)
+class App extends Component {
+  render() {
+    const Root = createAppContainer(AppNavigator)
+    AsyncStorage.clear()
+
+    return (
+      <View style={{
+        flex: 1
+      }}>
+        <Provider theme={{
+          ...DefaultTheme,
+            roundness: 2,
+            colors: {
+              ...DefaultTheme.colors,
+              primary: '#00bcd5'
+            }
+        }}>
+          <Root />
+        </Provider>
+      </View>
+    )
+  }
+}
+export default App

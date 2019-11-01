@@ -38,15 +38,17 @@ module.exports = require('react-native').StyleSheet.create({
   },
   contentList: {
     flexDirection:'column',
-    margin:10
+    margin:10,
+    flex: 1
   },
-  containerList: {
+  item: {
     flexDirection: 'row'
   },
   description: {
     fontSize:16,
     color: '#6f6f6f',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    flexWrap: 'wrap'
   },
   date: {
     fontSize:16,
@@ -56,5 +58,14 @@ module.exports = require('react-native').StyleSheet.create({
     alignItems: 'flex-end',
     borderWidth: 0.8,
     borderColor: '#dbdcdb'
-  }
+  },
+   imageContainer: {
+  justifyContent: 'center',
+  alignItems: 'center',
+ },
+ image: {
+  width: 100,
+  height: 100,
+  marginBottom: 10
+ },
 })

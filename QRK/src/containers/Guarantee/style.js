@@ -31,7 +31,8 @@ module.exports = require('react-native').StyleSheet.create({
   alignRadioButton: {
    flexDirection:'row',
    alignItems: 'center',
-   justifyContent: 'space-between'
+   justifyContent: 'space-between',
+   marginVertical: 10
   },
   contentList: {
    flexDirection:'row',
