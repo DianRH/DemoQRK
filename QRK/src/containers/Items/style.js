@@ -26,7 +26,7 @@ module.exports = require('react-native').StyleSheet.create({
   },
   card: {
   elevation: 2,
-  margin: 10,
+  marginVertical: 10,
   paddingHorizontal:16
   },
   img: {
@@ -34,7 +34,8 @@ module.exports = require('react-native').StyleSheet.create({
     height:65,
     borderColor: '#00bcd5',
     borderWidth: 1,
-    margin:20
+    margin:20,
+    borderRadius: 3
   },
   contentList: {
     flexDirection:'column',

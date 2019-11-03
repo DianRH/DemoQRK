@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import axios from 'axios'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import ImagePicker from 'react-native-image-crop-picker'
+import _ from 'lodash'
 
 const styles = require('./style.js')
 const tickets = [
@@ -49,8 +50,9 @@ class Ticket extends Component {
     }else{
       //const { navigate } = this.props.navigation
       //navigate('Ticket')
-      axios.get(`https://qrky-api.prestigos.info//tickets/${this.state.ticket}`).
+      axios.get(`https://qrky-api.prestigos.info/tickets/${this.state.ticket}`).
       then((response)=>{
+        console.warn(response);
         this.setState({
           visible: true
         })
@@ -60,17 +62,19 @@ class Ticket extends Component {
             AsyncStorage.setItem('products', JSON.stringify(response.data.products))
             .then(()=>{
               navigate('Items', {
-                recommended: response.data.recommended[0]
+                recommended: _.has(response,'data.recommended') ? response.data.recommended[0] : {},
+                products: response.data.products
               })
             })
           }else{
             products = JSON.parse(products)
-            products = products.concat(response.data.products)
+            products = _.concat(products,response.data.products)
 
             AsyncStorage.setItem('products', JSON.stringify(products))
             .then(()=>{
               navigate('Items', {
-                recommended: response.data.recommended[0]
+                recommended: _.has(response,'data.recommended') ? response.data.recommended[0] : {},
+                products: response.data.products
               })
             })
           }
@@ -117,7 +121,7 @@ class Ticket extends Component {
           </Surface>
         </View>
         <View style={styles.contentButton}>
-          <Button 
+          <Button
            style={styles.button}
            color='#00bcd5'
            mode='text'
