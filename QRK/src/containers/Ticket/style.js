@@ -9,11 +9,10 @@ module.exports = require('react-native').StyleSheet.create({
   paddingTop:16
   },
   Input: {
-    flex: 1,
+  flex: 1,
    height: 40,
    borderBottomWidth:2,
    borderBottomColor:'#00bcd5',
-   marginBottom: 20,
    fontSize:16,
    marginHorizontal: 20
  },
@@ -28,11 +27,20 @@ module.exports = require('react-native').StyleSheet.create({
  contentInput: {
    flexDirection: 'row',
    justifyContent: 'center',
-   alignItems: 'center'
-
+   alignItems: 'center',
+   marginBottom: 20
+ },
+ addImage: {
+   marginBottom: 15
  },
  button: {
-   marginBottom: 15
+   marginVertical: 15,
+   flexWrap: 'wrap',
+   justifyContent: 'flex-end',
+ },
+ contentButton: {
+   alignItems: 'flex-end',
+   borderWidth: 0.8,
+   borderColor: '#dbdcdb'
  }
-
 })

@@ -26,7 +26,7 @@ module.exports = require('react-native').StyleSheet.create({
   },
   card: {
   elevation: 2,
-  margin: 10,
+  marginVertical: 10,
   paddingHorizontal:16
   },
   img: {
@@ -34,19 +34,22 @@ module.exports = require('react-native').StyleSheet.create({
     height:65,
     borderColor: '#00bcd5',
     borderWidth: 1,
-    margin:20
+    margin:20,
+    borderRadius: 3
   },
   contentList: {
     flexDirection:'column',
-    margin:10
+    margin:10,
+    flex: 1
   },
-  containerList: {
+  item: {
     flexDirection: 'row'
   },
   description: {
     fontSize:16,
     color: '#6f6f6f',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    flexWrap: 'wrap'
   },
   date: {
     fontSize:16,
@@ -56,5 +59,14 @@ module.exports = require('react-native').StyleSheet.create({
     alignItems: 'flex-end',
     borderWidth: 0.8,
     borderColor: '#dbdcdb'
-  }
+  },
+   imageContainer: {
+  justifyContent: 'center',
+  alignItems: 'center',
+ },
+ image: {
+  width: 100,
+  height: 100,
+  marginBottom: 10
+ },
 })

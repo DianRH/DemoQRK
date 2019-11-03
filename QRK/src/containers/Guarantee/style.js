@@ -20,10 +20,11 @@ module.exports = require('react-native').StyleSheet.create({
     paddingVertical:15
   },
   IconShop: {
-    width: 30,
-    height:30,
+    width: 35,
+    height:35,
     borderColor: '#00bcd5',
-    borderWidth: 1
+    borderWidth: 1,
+    resizeMode: 'contain'
   },
   line: {
    marginHorizontal: 20
@@ -31,7 +32,8 @@ module.exports = require('react-native').StyleSheet.create({
   alignRadioButton: {
    flexDirection:'row',
    alignItems: 'center',
-   justifyContent: 'space-between'
+   justifyContent: 'space-between',
+   marginVertical: 10
   },
   contentList: {
    flexDirection:'row',

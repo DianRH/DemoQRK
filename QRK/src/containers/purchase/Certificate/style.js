@@ -37,14 +37,15 @@ module.exports = require('react-native').StyleSheet.create({
     height:65,
     borderColor: '#00bcd5',
     borderWidth: 1,
-    margin:20
+    marginRight:20
   },
   contentList: {
     flexDirection:'column',
-    margin:10
+    flex:1
   },
   containerList: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    padding:20
   },
   description: {
     fontSize:16,
