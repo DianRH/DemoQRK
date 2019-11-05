@@ -52,7 +52,7 @@ class Items extends Component {
            <View style={styles.content}>
               <View style={styles.contentTitle}>
                 <Text style={styles.title}>
-                  Artículos de garatía próximos a activarse
+                  Artículos de garantía próximos a activarse
                 </Text>
               </View>
 
