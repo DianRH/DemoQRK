@@ -31,7 +31,18 @@ module.exports = require('react-native').StyleSheet.create({
   description: {
     fontSize: 14,
     color: '#6f6f6f',
-     marginVertical:8
+     marginVertical:8,
+     //fontWeight: 'bold'
+  },
+  descriptionBold: {
+    fontSize: 14,
+    color: '#6f6f6f',
+     marginVertical:8,
+     fontWeight: 'bold'
+  },
+  dateContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between' 
   },
   card: {
   elevation: 2,
@@ -43,7 +54,8 @@ module.exports = require('react-native').StyleSheet.create({
     height:90,
     borderColor: '#00bcd5',
     borderWidth: 1,
-    margin:20,
+    marginTop:20,
+    marginBottom:10
   },
   contentImg: {
     alignItems: 'center'
@@ -75,6 +87,17 @@ contentText: {
    textAlign: 'center',
    color: '#6f6f6f',
    fontWeight:'bold'
- }
-
+ },
+ download: {
+ padding:6,
+ flexDirection:'row',
+ borderColor: 'gray',
+ borderRadius:4,
+ borderWidth:1,
+ marginBottom:15
+},
+downloadText: {
+  fontSize:14,
+  color: '#6f6f6f'
+}
 })
